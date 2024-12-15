@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "label": "Walk the dog",
+    "completed": true
+  },
+  {
+    "id": 2,
+    "label": "Take out the trash",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "label": "Cook dinner",
+    "completed": false
+  }
+]

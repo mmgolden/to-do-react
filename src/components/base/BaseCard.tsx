@@ -5,7 +5,7 @@ function BaseCardHeader(props: PropsWithChildren) {
 }
 
 function BaseCardContent(props: PropsWithChildren) {
-  return <div className="px-4 py-5 sm:p-6">{props.children}</div>;
+  return <div>{props.children}</div>;
 }
 
 export default function BaseCard(props: PropsWithChildren) {
