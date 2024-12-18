@@ -1,7 +1,7 @@
 import { useState } from "react";
 import BaseCard from "./components/base/BaseCard";
 import BaseButton from "./components/base/BaseButton";
-import BaseCheckbox from "./components/base/BaseCheckbox";
+import TaskListItem from "./components/task/TaskListItem";
 import taskData from "./tasks.json";
 import type { Task } from "./types";
 
@@ -47,29 +47,12 @@ function App() {
           <BaseCard.Content>
             <div className="divide-y divide-gray-200 border-b border-gray-200">
               {tasks.map((task, index) => (
-                <div key={index} className="relative flex gap-3 py-4 px-4">
-                  <div className="flex h-6 shrink-0 items-center">
-                    <BaseCheckbox
-                      id={`task-${task.id}`}
-                      name={`task-${task.id}`}
-                      value={task.id}
-                      checked={task.completed}
-                      onChange={onTaskChange}
-                    />
-                  </div>
-                  <div className="min-w-0 flex-1 text-sm/6">
-                    <label
-                      htmlFor={`task-${task.id}`}
-                      className={`${
-                        completedTasks.includes(task.id)
-                          ? "text-gray-400 line-through"
-                          : "text-gray-900"
-                      } select-none font-medium`}
-                    >
-                      {task.label}
-                    </label>
-                  </div>
-                </div>
+                <TaskListItem
+                  key={index}
+                  task={task}
+                  completedTasks={completedTasks}
+                  onTaskChange={onTaskChange}
+                />
               ))}
             </div>
           </BaseCard.Content>
