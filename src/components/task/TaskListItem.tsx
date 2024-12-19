@@ -1,5 +1,5 @@
-import BaseCheckbox from "../../components/base/BaseCheckbox";
-import type { Task } from "../../types";
+import BaseCheckbox from "@/components/base/BaseCheckbox";
+import type { Task } from "@/types";
 
 interface Props {
   task: Task;

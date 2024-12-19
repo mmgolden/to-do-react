@@ -1,9 +1,9 @@
 import { useState } from "react";
-import BaseCard from "./components/base/BaseCard";
-import BaseButton from "./components/base/BaseButton";
-import TaskListItem from "./components/task/TaskListItem";
-import taskData from "./tasks.json";
-import type { Task } from "./types";
+import BaseCard from "@/components/base/BaseCard";
+import BaseButton from "@/components/base/BaseButton";
+import TaskListItem from "@/components/task/TaskListItem";
+import taskData from "@/tasks.json";
+import type { Task } from "@/types";
 
 function App() {
   const [tasks] = useState<Task[]>(taskData);
